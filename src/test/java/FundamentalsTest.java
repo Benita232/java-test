@@ -216,7 +216,7 @@ class FundamentalsTest {
     @Test
     @DisplayName("Q4: countUpperCase – mixed case")
     void testCountUpperCase_mixed() {
-        assertEquals(3, Fundamentals.countUpperCase("HeLLo WoRLd"));
+        assertEquals(6, Fundamentals.countUpperCase("HeLLo WoRLd"));
     }
 
     @Test

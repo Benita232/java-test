@@ -16,10 +16,10 @@ public class Fundamentals {
     // Fix all three errors.
 
     public static int countEvens(int n) {
-        if (n < 1) return -1;
+        if (n < 1) return 0;
         int count = 0;
-        for (int i = 1; i < n; i++) {
-            if (i % 2 = 0) {
+        for (int i = 1; i < n+1; i++) {
+            if (i % 2 == 0) {
                 count++;
             }
         }
@@ -42,11 +42,11 @@ public class Fundamentals {
     // Fix all three errors.
 
     public static int findMax(int[] arr) {
-        if (arr = null || arr.length = 0) return Integer.MIN_VALUE;
+        if (arr == null || arr.length == 0) return Integer.MIN_VALUE;
         int max = arr[0];
-        for (int i = 1; i <= arr.length; i++) {    // fix: loop bound
-            if (arr[i] > max) {
-                max = arr[i];
+        for (int i : arr) {    // fix: loop bound
+            if (i > max) {
+                max = i;
             }
         }
         return max;
@@ -71,16 +71,16 @@ public class Fundamentals {
     // Make sure the ranges do not overlap and all ages are covered.
 
     public static String classifyAge(int age) {
-        if (                        ) {      // fill: out-of-range check
+        if ( age < 0 || age > 120 ) {      // fill: out-of-range check
             return "Invalid";
-        } else if (                 ) {      // fill: Child range
+        } else if ( age <= 12) {      // fill: Child range
             return "Child";
-        } else if (                 ) {      // fill: Teen range
+        } else if ( age <= 17) {      // fill: Teen range
             return "Teen";
-        } else if (                 ) {      // fill: Adult range
+        } else if(age <= 64) {      // fill: Adult range
             return "Adult";
         } else {
-            return          ;                // fill: what goes here?
+            return "Senior"          ;                // fill: what goes here?
         }
     }
 
@@ -97,8 +97,18 @@ public class Fundamentals {
     // Hint: Character.isUpperCase(char c) may be useful.
 
     public static int countUpperCase(String s) {
+        if (s == null || s.isEmpty()){
+            return 0;
+        }
+        int count = 0;
+        for (char i : s.toCharArray()){
+            if (Character.isUpperCase(i)){
+                count++;
 
-        return      ;
+            }
+        }
+
+        return count;
     }
 
 }
